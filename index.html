@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<!--         TO DO:            
+  Create an image scroll bar showing best selling products
+  Fill out contact page, products page etc.
+  Create a shopping cart
+
+-->
+<html lang="en"> 
+  <head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>SourcedbyCellz</title>
+  <style>
+  
+
+  body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;;
+  }
+
+  /* Header CSS */
+
+  #header-div {
+    height: 150px;
+    width: 100%;
+    border-top: white solid 5px;
+    margin-bottom: 100px;
+    position: relative;
+  }
+
+  #header-img {
+    height: 100%;
+    width: 9%;
+    display: flex;
+    position: relative;
+    left: 44%;
+
+  }
+
+  #main-div {
+    position: relative;
+    top: 300px;
+    left: 80px;
+    height: 1000px;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 120px;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    
+    
+  }
+
+
+
+  #icon-img {
+    height: 10px;
+    width: 10px;
+  }
+
+  #mid-section {
+    position: relative;
+    top: 250px;
+    text-align: center;
+  }
+
+  /* Card Item */
+
+  .card-img {
+    position: relative;
+    left: 80px;
+    height: 800px;
+    width: 450px;
+    background-color: black;
+    border: 3px solid white;
+    box-shadow: 10px;
+     
+  }
+
+  .card-img img {
+    height: 500px; 
+    width: 400px; 
+    position: absolute;
+    left: 5%;
+    border-radius: 5%;
+
+  }
+
+  .card-text {
+    position: relative;
+    top: 550px;
+    left: 6%;
+    font-size: 1.2rem;
+    
+  }
+
+  .snaps-inline {
+    scroll-snap-type: inline mandatory;
+  }
+
+  .snaps-inline > * {
+    scroll-snap-align: start;
+  }
+
+
+  /* Footer CSS */
+
+  footer {
+    text-align: center;
+    height: 600px;
+    position: relative;
+    top: 550px;
+  }
+
+  hr {
+    background-color: white;
+  }
+
+  .socials-bar {
+    height: 600px;
+    display: flex;
+    position: relative;
+    bottom: 50px;
+    gap: 30px;
+    align-items: end;
+    justify-content: center;
+
+  }
+
+  /* Miscellaneous */
+
+  a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    
+  }
+
+  .link-style {
+    text-align: center;
+    margin-left: 100px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 900px;
+    font-size: 20px;
+
+  }
+
+  a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+    transform: scale(1.15);
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 60px;
+  }
+
+  ul li {
+    display: inline-block;
+    
+  }
+  ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+
+  }
+
+  ul li ul.dropdown li {
+    display: block;
+  }
+  ul li ul.dropdown {
+    width: 100%;
+    position: relative;
+    left: 30px;
+    z-index: 999;
+    display: none;
+  }
+  
+  ul li a:hover {
+    transform: scale(1.2);
+
+    
+  }
+
+  ul li:hover ul.dropdown {
+    display: block;
+  }
+  </style>
+    
+  </head>
+
+
+  <body>
+    <div id="header-div">
+
+      <a draggable="true" class="link-style" href="index.html">
+      <img id="header-img" src="./assets/images/sourcedBycellz.jpg"/>
+      </a>
+      
+      <ul>
+        
+        <li><a draggable="true" class="link-style" href="contact.html"><img id="icon-img" src="./assets/images/search-icon.png"/>
+        </a>  </li>
+        
+        <li>
+          <a draggable="true" class="link-style" href="products.html">Products</a>
+          <ul class="dropdown">
+            <li><a href="products.html">Tracksuits</a></li>
+            <li><a href="products.html">Shoes</a></li>
+            <li><a href="products.html">T-shirts</a></li>
+            <li><a href="products.html">Coats and Jackets</a></li>
+            <li><a href="products.html">Hats and Scarfs</a></li>
+          </ul>
+        </li>
+
+        <li><a draggable="true" class="link-style" href="contact.html">Contact</a></li>
+
+      </ul>
+      
+
+    </div>
+
+
+    
+    <div id="mid-section"><h2>This Week's Hottest Items</h2></div>
+    
+
+    <!--  Main Section fo Web Page--> 
+
+    <div id="main-div" class="snaps-inline">
+      
+      <div class="card-img"> 
+        <img src="assets/images/monclizzy.jpg">
+        <p class="card-text"> Moncler Vest <br/> £150 </p>
+
+      </div>
+      <div class="card-img"> 
+        <img src="assets/images/monclizzy.jpg">
+      </div>
+      <div class="card-img"> 
+        <img src="assets/images/monclizzy.jpg">
+      </div>
+      <div class="card-img"> 
+        <img src="assets/images/monclizzy.jpg">
+      </div>
+      <div class="card-img"> 
+        <img src="assets/images/monclizzy.jpg">
+      </div>
+
+      
+
+
+
+
+    </div>
+
+    <footer>
+      <hr/>
+
+      <div class="socials-bar">
+      <a href="https://www.instagram.com/cellztheplug/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&__coig_restricted=1"><img style="height: 20px; width: 20px;" src="assets/images/insta-icon.png" href=""></a>  
+      <a href="https://www.tiktok.com/@sourcedbycellz"><img style="height: 20px; width: 20px;" src="assets/images/tiktok-icon.png" href=""></a>  
+      </div>
+
+      <p> © 2024, SourcedbyCellz Powered by KC Designz</p>
+
+    </footer>
+
+
+
+  </body>
+
+
+
+
+
+</html>
