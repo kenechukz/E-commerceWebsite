@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<!--         TO DO:            
+  FIX media scroller to be able to have groups 
+  Fill out contact page, products page etc.
+  Create a shopping cart
+
+-->
+<html lang="en"> 
+  <head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>SourcedbyCellz</title>
+ 
+    
+  </head>
+
+
+  <body>
+    <div id="header-div">
+
+      <!-- Logo -->
+      <a draggable="true" class="link-style" href="index.html">
+      <img id="header-img" src="./assets/images/sourcedBycellz.jpg"/>
+      </a>
+      
+      <!-- Nav bar-->
+      <nav>
+        <ul>
+          <!-- Search icon -->
+          <input id="search-bar" style="height: 20px; position: relative; top: 14px; left: 100px;" type="text" placeholder="Search..">
+          <li id="search-icon"><a  draggable="true" class="link-style"><img id="icon-img" style="height: 12px; width: 12px;" src="./assets/images/search-icon.png"/>
+          
+          </a>  </li>
+          
+          <li>
+            <!-- Products page -->
+            <a draggable="true" class="link-style" href="products.html">Products</a>
+            <ul class="dropdown">
+              <li><a href="tech.html">Tracksuits</a></li>
+              <li><a href="allshoes.html">Shoes</a></li>
+              <li><a href="jacket.html">Coats and Jackets</a></li>
+              <li><a href="hat.html">Hats and Scarfs</a></li>
+            </ul>
+          </li>
+          <!-- Contact page -->
+          <li><a draggable="true" class="link-style" href="contact.html">Contact</a></li>
+          
+
+        </ul>
+        <div id="basket-quantity" style="border-radius: 20%; position: relative; left: 135px; top: 18px; width: 20px; height: 20px; background-color: red;">
+          
+          
+        </div>
+        <script src="basketvalue.js"></script>
+        <a draggable="true" class="link-style" href="basket.html">
+          <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="basket-icon bi bi-bag-dash" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5"/>
+            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+          </svg>
+        </a>
+      </nav>
+
+      <script>
+        // Get references to the clickable element and the display element
+        const clickMeButton = document.getElementById('search-icon');
+        const displayElement = document.getElementById('search-bar');
+      
+        // Add a click event listener to the clickable element
+        clickMeButton.addEventListener('click', function() {
+          // When clicked, toggle the display of the display element
+          if (displayElement.style.display === 'none') {
+            displayElement.style.display = 'block';
+          } else {
+            displayElement.style.display = 'none';
+          }
+        });
+      </script>
+
+    </div>
+
+
+<main>
+
+  <form class="contact-form" action="https://formspree.io/f/xwkgyvbe"
+  method="POST">
+  <label>
+    First name:<br>
+    <input type="text" name="name" placeholder="Name">
+  </br>
+  </label>
+    </br>
+    <label>
+      Email address:<br>
+      <input style="font-size: 12px;" type="email" name="email" placeholder="Email">
+    </br>
+    </label>
+    </br>
+    <label>
+      Subject of query:<br>
+      <input type="text" name="subject" placeholder="Subject">
+    </br>
+    </label>
+    </br>
+
+    <label> 
+      Query
+    </br>
+      <textarea style="font-family: 'Poppins', sans-serif; width: 1000px; height: 300px;" name="message" placeholder="Enter something.."></textarea>
+      </br>
+    </label>
+    <button style="font-family:'Poppins', sans-serif; background-color: grey; color: white; font-weight: bold; border-radius: 10%; width: 100px; height: 50px;" type="submit">Send</button>
+
+  </form>
+
+
+
+</main>
+
+
+    
+
+    <footer>
+
+
+      <div class="socials-bar">
+      <a href="https://www.instagram.com/cellztheplug/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&__coig_restricted=1"><img style="height: 20px; width: 20px;" src="assets/images/insta-icon.png" href=""></a>  
+      <a href="https://www.tiktok.com/@sourcedbycellz"><img style="height: 20px; width: 20px;" src="assets/images/tiktok-icon.png" href=""></a>  
+      </div>
+
+      <p> © 2024, SourcedbyCellz Powered by KC Designz</p>
+
+    </footer>
+
+
+
+  </body>
+
+
+
+
+
+</html>
