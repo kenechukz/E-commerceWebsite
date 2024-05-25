@@ -1,216 +1,20 @@
 <!DOCTYPE html>
 
 <!--         TO DO:            
-  Create an image scroll bar showing best selling products
-  Fill out contact page, products page etc.
-  Create a shopping cart
+  Fix shopping cart
+  Get add to cart working for bottom 3 products on "product.html" and in individual pages within "product.html"
+  
 
 -->
 <html lang="en"> 
   <head>
   <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
   <title>SourcedbyCellz</title>
-  <style>
-  
-
-  body {
-    background-color: black;
-    color: white;
-    font-family: 'Poppins', sans-serif;;
-  }
-
-  /* Header CSS */
-
-  #header-div {
-    height: 150px;
-    width: 100%;
-    border-top: white solid 5px;
-    margin-bottom: 100px;
-    position: relative;
-  }
-
-  #header-img {
-    height: 100%;
-    width: 9%;
-    display: flex;
-    position: relative;
-    left: 44%;
-
-  }
-
-  #main-div {
-    position: relative;
-    top: 300px;
-    left: 80px;
-    height: 1000px;
-    width: 100%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 120px;
-
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    
-    
-  }
-
-
-
-  #icon-img {
-    height: 10px;
-    width: 10px;
-  }
-
-  #mid-section {
-    position: relative;
-    top: 250px;
-    text-align: center;
-  }
-
-  /* Card Item */
-
-  .card-img {
-    position: relative;
-    left: 80px;
-    height: 800px;
-    width: 450px;
-    background-color: black;
-    border: 3px solid white;
-    box-shadow: 10px;
-     
-  }
-
-  .card-img img {
-    height: 500px; 
-    width: 400px; 
-    position: absolute;
-    left: 5%;
-    border-radius: 5%;
-
-  }
-
-  .card-text {
-    position: relative;
-    top: 550px;
-    left: 6%;
-    font-size: 1.2rem;
-    
-  }
-
-  .snaps-inline {
-    scroll-snap-type: inline mandatory;
-  }
-
-  .snaps-inline > * {
-    scroll-snap-align: start;
-  }
-
-
-  /* Footer CSS */
-
-  footer {
-    text-align: center;
-    height: 600px;
-    position: relative;
-    top: 550px;
-  }
-
-  hr {
-    background-color: white;
-  }
-
-  .socials-bar {
-    height: 600px;
-    display: flex;
-    position: relative;
-    bottom: 50px;
-    gap: 30px;
-    align-items: end;
-    justify-content: center;
-
-  }
-
-  /* Miscellaneous */
-
-  a {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    
-  }
-
-  .link-style {
-    text-align: center;
-    margin-left: 100px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    font-weight: 900px;
-    font-size: 20px;
-
-  }
-
-  a:link { 
-    text-decoration: none; 
-  } 
-  a:visited { 
-    text-decoration: none; 
-  } 
-  a:hover { 
-    text-decoration: none; 
-    transform: scale(1.15);
-  } 
-  a:active { 
-    text-decoration: none; 
-  }
-
-  ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    right: 60px;
-  }
-
-  ul li {
-    display: inline-block;
-    
-  }
-  ul li a {
-    display: block;
-    padding: 10px 15px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    font-size: 15px;
-
-  }
-
-  ul li ul.dropdown li {
-    display: block;
-  }
-  ul li ul.dropdown {
-    width: 100%;
-    position: relative;
-    left: 30px;
-    z-index: 999;
-    display: none;
-  }
-  
-  ul li a:hover {
-    transform: scale(1.2);
-
-    
-  }
-
-  ul li:hover ul.dropdown {
-    display: block;
-  }
-  </style>
     
   </head>
 
@@ -218,30 +22,78 @@
   <body>
     <div id="header-div">
 
+      <!-- Logo -->
       <a draggable="true" class="link-style" href="index.html">
       <img id="header-img" src="./assets/images/sourcedBycellz.jpg"/>
       </a>
       
-      <ul>
-        
-        <li><a draggable="true" class="link-style" href="contact.html"><img id="icon-img" src="./assets/images/search-icon.png"/>
-        </a>  </li>
-        
-        <li>
-          <a draggable="true" class="link-style" href="products.html">Products</a>
-          <ul class="dropdown">
-            <li><a href="products.html">Tracksuits</a></li>
-            <li><a href="products.html">Shoes</a></li>
-            <li><a href="products.html">T-shirts</a></li>
-            <li><a href="products.html">Coats and Jackets</a></li>
-            <li><a href="products.html">Hats and Scarfs</a></li>
-          </ul>
-        </li>
+      <!-- Nav bar-->
+      <nav>
+        <ul>
+          <!-- Search icon -->
+          <div class="search-wrapper">
+            <input id="search-bar" style="height: 20px; position: relative; top: 14px; left: 100px;" type="text" placeholder="Search..">
+            <li id="search-icon"><a  draggable="true" class="link-style"><img id="icon-img" style="height: 12px; width: 12px;" src="./assets/images/search-icon.png"/>
+          </div>
+          <div class="product-cards">
+            <template>
+            <div class="card">
+              <img height="200px" width="200px" src="">
+              <p></p>
 
-        <li><a draggable="true" class="link-style" href="contact.html">Contact</a></li>
+            </div>
+            </template>
 
-      </ul>
+          </div>  
+
+          
+          </a>  </li>
+          
+          <li>
+            <!-- Products page -->
+            <a draggable="true" class="link-style" href="products.html">Products</a>
+            <ul class="dropdown">
+              <li><a href="tech.html">Tracksuits</a></li>
+              <li><a href="allshoes.html">Shoes</a></li>
+              <li><a href="jacket.html">Coats and Jackets</a></li>
+              <li><a href="hat.html">Hats and Scarfs</a></li>
+            </ul>
+          </li>
+          <!-- Contact page -->
+          <li><a draggable="true" class="link-style" href="contact.html">Contact</a></li>
+          
+        </ul>
+        
+        
+        <div id="basket-quantity" style="border-radius: 20%; position: relative; left: 135px; top: 18px; width: 20px; height: 20px; background-color: red;">
+          
+          
+        </div>
+        <script src="basketvalue.js"></script>
+
+        <a draggable="true" class="link-style" href="basket.html">
+          <svg class="basket-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bag-dash" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5"/>
+            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+          </svg>
+        </a>
+      </nav>
+
+      <script>
+        // Get references to the clickable element and the display element
+        const clickMeButton = document.getElementById('search-icon');
+        const displayElement = document.getElementById('search-bar');
       
+        // Add a click event listener to the clickable element
+        clickMeButton.addEventListener('click', function() {
+          // When clicked, toggle the display of the display element
+          if (displayElement.style.display === 'none') {
+            displayElement.style.display = 'block';
+          } else {
+            displayElement.style.display = 'none';
+          }
+        });
+      </script>
 
     </div>
 
@@ -250,34 +102,18 @@
     <div id="mid-section"><h2>This Week's Hottest Items</h2></div>
     
 
-    <!--  Main Section fo Web Page--> 
+    <!--  Main Section for Web Page--> 
 
-    <div id="main-div" class="snaps-inline">
+    <div id="main-div" class="snaps-inline media-scroller-with-groups">
       
-      <div class="card-img"> 
-        <img src="assets/images/monclizzy.jpg">
-        <p class="card-text"> Moncler Vest <br/> £150 </p>
-
-      </div>
-      <div class="card-img"> 
-        <img src="assets/images/monclizzy.jpg">
-      </div>
-      <div class="card-img"> 
-        <img src="assets/images/monclizzy.jpg">
-      </div>
-      <div class="card-img"> 
-        <img src="assets/images/monclizzy.jpg">
-      </div>
-      <div class="card-img"> 
-        <img src="assets/images/monclizzy.jpg">
-      </div>
-
-      
-
-
-
 
     </div>
+    <script src="main.js"></script>
+    <script>
+      //addEventListener
+
+    </script>
+
 
     <footer>
       <hr/>
