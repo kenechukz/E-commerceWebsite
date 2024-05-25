@@ -1,0 +1,1 @@
+const productTemplate = document.getElementsByTagName("template");
