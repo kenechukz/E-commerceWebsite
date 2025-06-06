@@ -4,7 +4,7 @@
 
 ## 📄 Project Description
 
-This is a full-stack e-commerce web application built with **HTML**, **CSS**, and **JavaScript** on the frontend, and powered by **Node.js** and **Express.js** on the backend. It simulates a realistic online shopping experience, including product listings, a functional shopping cart, contact form handling, and secure checkout with Stripe integration.
+This is a full-stack e-commerce web application built with **HTML**, **CSS**, and **JavaScript** on the frontend, and powered by **Node.js** and **Express.js** on the backend. I built it as part of my Web Design Module in 1st Year of University. It simulates a realistic online shopping experience, including product listings, a functional shopping cart, contact form handling, and secure checkout with Stripe integration.
 
 The website was designed to be responsive and user-friendly, focusing on intuitive design, seamless navigation, and integration with real-world APIs.
 
