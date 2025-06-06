@@ -29,27 +29,6 @@ The website was designed to be responsive and user-friendly, focusing on intuiti
 
 ---
 
-## 🗂️ Folder Structure (Simplified)
-
-```
-
-📁 public/
-├── index.html
-├── styles.css
-└── script.js
-
-📁 server/
-├── app.js
-└── checkout.js
-
-📁 Stripe\_Checkout/
-└── index.js
-
-📁 views/
-└── contact.html
-
-````
-
 ---
 
 ## ▶️ Running the Stripe Server
