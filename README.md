@@ -54,5 +54,3 @@ Make sure your Stripe secret key is added to a .env file or directly into the in
 ## 📬 Contact
 
 If you have any questions, feel free to [open an issue](https://github.com/kenechukz) or connect via [LinkedIn](https://www.linkedin.com/in/kene-declan-chukwu/).
-
-=
