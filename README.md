@@ -12,13 +12,11 @@ The website was designed to be responsive and user-friendly, focusing on intuiti
 
 ## 🎯 Features
 
-- ✅ Modern landing page with responsive layout
+- ✅ Modern landing page
 - 🔍 Product catalog with real-time search
 - 🛒 Add-to-cart functionality with live total updates
 - 💳 Secure checkout via Stripe Checkout API
 - 📬 Contact form submission using Formspree API
-- 🌐 Fully responsive UI for mobile and desktop
-
 ---
 
 ## 🧰 Technologies Used
@@ -43,20 +41,6 @@ node index
 ````
 
 Make sure your Stripe secret key is added to a .env file or directly into the index.js file for local testing.
-
----
-
-## 🖼️ Screenshots
-
-> *(Add images here to showcase the UI and functionality. For example: home page, cart, checkout, contact form, etc.)*
-
-```
-![Landing Page](images/landing-page.png)
-![Product Listing](images/products.png)
-![Checkout](images/checkout.png)
-```
-
----
 
 ## 💡 Learning Highlights
 
